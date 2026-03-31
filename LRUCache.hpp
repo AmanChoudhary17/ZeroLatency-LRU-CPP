@@ -28,7 +28,7 @@ public:
             cache_list.splice(cache_list.begin(), cache_list, it);
             return it->second;
         }
-        return "NOT_FOUND"; // Simplified for this example
+        return "NOT_FOUND";
     }
 
     void put(K key, V value) {
