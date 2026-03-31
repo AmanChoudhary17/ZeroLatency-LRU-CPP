@@ -8,7 +8,7 @@ void runBenchmarks() {
     const int numOps = 1000000;
     const int tableSize = 2000000; // Large size to minimize collisions
 
-    // 1. Benchmark std::unordered_map
+    
     std::unordered_map<int, int> stdMap;
     auto start = std::chrono::high_resolution_clock::now();
     for (int i = 0; i < numOps; ++i) {
@@ -17,7 +17,7 @@ void runBenchmarks() {
     auto end = std::chrono::high_resolution_clock::now();
     auto stdDuration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
 
-    // 2. Benchmark Our CustomHashTable
+    //Our CustomHashTable
     CustomHashTable<int, int, 2000000> customTable;
     start = std::chrono::high_resolution_clock::now();
     for (int i = 0; i < numOps; ++i) {
